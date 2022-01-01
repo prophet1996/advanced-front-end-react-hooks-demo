@@ -8,15 +8,14 @@ export default function Home() {
   // we get this value back in an array, where the first value is the count
   // this is called array destructuring
 
-  // Only call Hooks at the top level
-  // Only call Hooks from React functions
   const [messageData, setMessageData] = useState({
-    message: "",
-    metadata: Date.now(),
+    messageObject: {
+      message: "",
+      metadata: Date.now(),
+    },
   });
 
   const [messageList, setMessageList] = useState([]);
-  const [messageAuthor, setMessageAuthor] = useState("");
 
   return (
     <div className={styles.container}>
